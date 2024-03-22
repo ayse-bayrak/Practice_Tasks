@@ -1,10 +1,7 @@
-package ayse_working.GroupMeeting.week20;
-
-import java.lang.reflect.Array;
+package ayse_working.GroupMeeting.week20Stream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class FindSomething {
 
@@ -27,12 +24,12 @@ public class FindSomething {
 
         System.out.println("Question-5- Array of Digit");
         int positive = 490;
-        System.out.println(Arrays.toString(ArrayOfDigits(positive)));
+        System.out.println(Arrays.toString(ArrayOfDigits(positive)));//[4, 9, 0]
 
     }
     public static int FindMaxFromIntArray (int[] array) {
         return Arrays.stream(array)
-                .sorted().max().getAsInt();
+                .max().getAsInt();
     }
 
     public static int FindFactorial (int number) {

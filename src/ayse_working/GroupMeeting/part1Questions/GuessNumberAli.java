@@ -1,4 +1,4 @@
-package ayse_working.GroupMeeting;
+package ayse_working.GroupMeeting.part1Questions;
 
 import java.util.Random;
 import java.util.Scanner;

@@ -1,21 +1,16 @@
-package ayse_working.GroupMeeting;
+package ayse_working.GroupMeeting.part1Questions;
 
 import java.util.Scanner;
 
-public class Question_1_AnimalFast {
+public class test {
     public static void main(String[] args) {
 
-        animalFeast();
-
-    }
-
-    public static boolean animalFeast() {
-
         Scanner input = new Scanner(System.in);
+
         System.out.println("Enter a animal name");
-        String animal = input.nextLine();
-        System.out.println("Enter a dish name");
-        String dish = input.nextLine();
+        String animal = input.next();
+        System.out.println("Enter a fish name");
+        String dish = input.next();
 
         boolean result = false;
         char firstAnimal = animal.charAt(0);
@@ -24,15 +19,9 @@ public class Question_1_AnimalFast {
         char firstDish = dish.charAt(0);
         char lastDish = dish.charAt(dish.length()-1);
 
-        if( (firstAnimal == firstDish) && (lastAnimal == lastDish )) {
+        if(firstAnimal==firstDish && lastAnimal==lastDish) {
             result = true;
         }
-
         System.out.println(result);
-        return result;
     }
 }
-/*
-great blue heron ==== garlic naan
-chickadee === chocolate cake
- */

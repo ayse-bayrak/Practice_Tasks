@@ -1,4 +1,4 @@
-package ayse_working.GroupMeeting;
+package ayse_working.GroupMeeting.part1Questions;
 
 public class AnimalFeastAli {
     public static void main(String[] args) {
