@@ -16,7 +16,7 @@ public class ValidAnagram {
 
     }
 
-    public boolean validAnagram(String t, String s) {
+    public static boolean validAnagram(String t, String s) {
 
         if (!(1<=s.length()&&t.length()<=50000)) {
             return false;
