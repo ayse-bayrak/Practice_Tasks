@@ -12,13 +12,15 @@ public class ValidAnagram {
         String s = "anagram";
         String t = "nagaram";
 
-        System.out.println(validAnagram(t, s));
+        System.out.println(isAnagram(s, t));
+        System.out.println(isAnagram1(s, t));
+        System.out.println(isAnagram2(s, t));
 
     }
 
-    public static boolean validAnagram(String t, String s) {
+    public static boolean isAnagram(String s, String t) { //45 mb
 
-        if (!(1<=s.length()&&t.length()<=50000)) {
+        if (!(1<=s.length()&&t.length()<=50000) || !(s.length()==t.length())) {
             return false;
         }
 
@@ -29,4 +31,30 @@ public class ValidAnagram {
 
         return Arrays.equals(t1, s1);
     }
+
+    public static boolean isAnagram1(String s, String t) { //Memory: 43.7 mb
+        while(s.length()==t.length())
+        {
+            char a=s.charAt(0);
+            s=s.replace(a+"","");
+            t=t.replace(a+"","");
+            if(s.length()==0 && t.length()==0){
+                return true ;
+            }
+
+        }
+        return false;
+    }
+
+
+        public static boolean isAnagram2(String s, String t) {
+            char [] schar = s.toCharArray();
+            char [] tchar = t.toCharArray();
+
+            Arrays.sort(schar);
+            Arrays.sort(tchar);
+
+            return Arrays.equals(schar, tchar);
+        }
+
 }
