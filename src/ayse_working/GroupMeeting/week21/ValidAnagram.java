@@ -18,6 +18,7 @@ public class ValidAnagram {
 
     }
 
+
     public static boolean isAnagram(String s, String t) { //45 mb
 
         if (!(1<=s.length()&&t.length()<=50000) || !(s.length()==t.length())) {
